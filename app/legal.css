@@ -1,0 +1,30 @@
+:root { --purple: #855cd6; --text: #2f3445; --muted: #646b82; --bg: #f6f4fb; --line: #e4e0f0; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
+header { background: linear-gradient(135deg, #a77bff, #855cd6 55%, #4c97ff); color: #fff; padding: 18px 16px 70px; }
+.wrap { max-width: 860px; margin: 0 auto; }
+nav { display: flex; align-items: center; gap: 10px; }
+nav a { color: #fff; text-decoration: none; font-weight: 800; font-size: 19px; display: flex; align-items: center; gap: 10px; }
+nav a b { color: #ffd21f; }
+nav .links { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+nav .links a { font-size: 13px; font-weight: bold; background: rgba(255, 255, 255, .18); padding: 7px 12px; border-radius: 16px; }
+h1 { font-size: clamp(28px, 5vw, 40px); margin: 34px 0 6px; letter-spacing: -.3px; }
+.updated { opacity: .9; margin: 0; }
+main { margin-top: -44px; padding: 0 16px 50px; }
+article { background: #fff; border-radius: 18px; padding: clamp(20px, 4vw, 44px); box-shadow: 0 10px 30px rgba(60, 30, 140, .08); }
+article h2 { font-size: 20px; margin: 34px 0 8px; padding-top: 6px; border-top: 1px solid var(--line); }
+article h2:first-of-type { border-top: 0; margin-top: 0; }
+article h3 { font-size: 16px; margin: 20px 0 6px; }
+article p, article li { color: #3b4053; }
+article ul { padding-left: 22px; }
+.summary { background: #f3efff; border: 1px solid #e0d6ff; border-radius: 14px; padding: 16px 20px; margin-bottom: 26px; }
+.summary h2 { border: 0; margin: 0 0 6px; font-size: 17px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 16px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: #faf8ff; font-size: 13px; color: var(--muted); }
+.toc { columns: 2; font-size: 14px; margin: 0 0 24px; padding-left: 20px; }
+a { color: var(--purple); }
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px 16px; }
+.steps li { margin-bottom: 8px; }
+.cta { display: inline-block; background: var(--purple); color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 10px; font-weight: bold; }
+@media (max-width: 620px) { .toc { columns: 1; } table { font-size: 13px; } th, td { padding: 8px 6px; } nav .links { display: none; } }

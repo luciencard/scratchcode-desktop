@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "ScratchCode",
+  "short_name": "ScratchCode",
+  "description": "Scratch 3 en code : écris les blocs Scratch en texte, avec autocomplétion, extensions et exemples de jeux.",
+  "lang": "fr",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#e9f1fc",
+  "theme_color": "#855cd6",
+  "categories": ["education", "developer", "games"],
+  "icons": [
+    { "src": "/icons/icon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/icons/icon-72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/icons/icon-144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "file_handlers": [
+    { "action": "/", "accept": { "application/x.scratch.sb3": [".sb3"] } }
+  ],
+  "shortcuts": [
+    { "name": "Exemples", "url": "/?open=examples", "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96" }] }
+  ]
+}

@@ -1,0 +1,11 @@
+ScratchCode - Conditions d'utilisation (résumé)
+
+ScratchCode est un éditeur de programmation gratuit inspiré de Scratch 3.
+La version pour ordinateur fonctionne hors ligne, sans compte, et ne transmet aucune donnée personnelle.
+Tes projets t'appartiennent et restent sur ton ordinateur.
+Le logiciel est fourni "en l'état", sans garantie.
+Scratch est une marque de la Scratch Foundation ; ScratchCode n'y est pas affilié.
+Le personnage Scratch Cat est sous licence CC BY-SA 2.0 (Scratch Foundation).
+
+Conditions complètes : https://scratchcode.web.app/terms/
+Confidentialité : https://scratchcode.web.app/privacy/

@@ -1,0 +1,73 @@
+{
+  "name": "scratchcode-desktop",
+  "productName": "ScratchCode",
+  "version": "2.0.0",
+  "description": "ScratchCode : Scratch 3 en code, hors ligne",
+  "author": "ScratchCode",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis --x64",
+    "dist:linux": "electron-builder --linux AppImage deb tar.gz --x64",
+    "dist:mac": "electron-builder --mac dmg --x64 --arm64"
+  },
+  "build": {
+    "appId": "app.web.scratchcode.desktop",
+    "productName": "ScratchCode",
+    "copyright": "© 2026 ScratchCode",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*",
+      "build/icon.png"
+    ],
+    "fileAssociations": [
+      {
+        "ext": "sb3",
+        "name": "Projet Scratch",
+        "description": "Projet Scratch 3",
+        "role": "Editor"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png",
+      "artifactName": "ScratchCode-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "ScratchCode",
+      "license": "build/license.txt"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "tar.gz"
+      ],
+      "icon": "build/icon.png",
+      "category": "Education",
+      "artifactName": "ScratchCode-linux-${arch}.${ext}",
+      "maintainer": "ScratchCode"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png",
+      "category": "public.app-category.education",
+      "artifactName": "ScratchCode-mac-${arch}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3"
+  },
+  "homepage": "https://scratchcode.web.app"
+}
