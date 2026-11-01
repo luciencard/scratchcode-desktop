@@ -1,11 +1,18 @@
 # ScratchCode pour ordinateur
 
 ScratchCode, c'est Scratch 3 où chaque bloc s'écrit en une ligne de code, avec l'autocomplétion.
-Cette version pour ordinateur marche **hors ligne et sans compte**.
+Cette version pour ordinateur marche **hors ligne et sans compte**, comme Scratch Desktop :
+
+- **Enregistrer sur ton ordinateur** ouvre une vraie fenêtre « Enregistrer sous », qui se souvient du dernier dossier.
+- Double-cliquer sur un fichier `.sb3` l'ouvre dans ScratchCode.
+- Ton projet est gardé quand tu fermes la fenêtre, et rouvert au lancement suivant.
+- La taille et la position de la fenêtre sont retenues.
+- `Ctrl` + `+`, `Ctrl` + `-` et `Ctrl` + `0` pour zoomer, `F11` pour le plein écran.
+- Quand une nouvelle version sort, l'appli te le dit au démarrage (si tu es connecté à Internet).
 
 ## Télécharger
 
-Va dans [**Releases**](https://github.com/haydarcreator/scratchcode-desktop/releases/latest) et prends le fichier pour ton système :
+Va dans [**Releases**](https://github.com/luciencard/scratchcode-desktop/releases/latest) et prends le fichier pour ton système :
 
 | Système | Fichier | Installation |
 |---|---|---|

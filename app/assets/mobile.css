@@ -1,0 +1,63 @@
+/* ScratchCode sur téléphone et tablette : voir mobile.js */
+
+/* Scène : le doigt pilote le jeu, il ne fait ni défiler ni zoomer la page. */
+.stage-wrap, .stage-wrap canvas {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Boutons : pas de délai ni de zoom au double appui. */
+.stage-header button, .bottom-nav button, .m-only, .m-sheet button { touch-action: manipulation; }
+
+/* Bouton « Quitter le plein écran » */
+.sc-exit-full { display: none; }
+body.stage-full:not(.player) .sc-exit-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  margin-left: 6px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 20px;
+  background: #855cd6;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+body.stage-full:not(.player) .sc-exit-full:active { background: #714cbd; }
+
+/* Plein écran : la barre reste au-dessus de la scène, à l'abri des encoches et de la barre d'état. */
+body.stage-full:not(.player) .stage-pane {
+  padding-top: max(8px, env(safe-area-inset-top));
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+  padding-left: max(8px, env(safe-area-inset-left));
+  padding-right: max(8px, env(safe-area-inset-right));
+}
+body.stage-full:not(.player) .stage-header { position: relative; z-index: 2; width: 100%; }
+
+@media (max-width: 760px) {
+  /* En plein écran, la barre du haut et le menu du bas sont cachés : drapeau et stop reviennent ici. */
+  body.stage-full:not(.player) .stage-header .flag,
+  body.stage-full:not(.player) .stage-header .stop { display: flex !important; }
+  body.stage-full:not(.player) .stage-header .flag,
+  body.stage-full:not(.player) .stage-header .stop { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  /* « Quitter » remplace le bouton plein écran. */
+  body.stage-full:not(.player) .stage-header .stage-size[data-size="full"] { display: none !important; }
+  body.stage-full:not(.player) .stage-wrap { width: min(100vw - 16px, (100dvh - 72px) * 4 / 3); }
+}
+
+/* L'assistant IA n'existe que sur le site (ni appli ordinateur, ni appli Android). */
+html:not([data-platform="web"]) #aiOpenBtn,
+html:not([data-platform="web"]) .ai-panel { display: none !important; }
+
+/* Appli Android APK : pas de compte, comme l'appli ordinateur. */
+.sc-apk .m-sheet [data-act="login"],
+.sc-apk .m-sheet [data-act="logout"],
+.sc-apk .m-sheet [data-act="cloud-list"],
+.sc-apk .m-sheet [data-act="cloud-save"],
+.sc-apk .m-sheet [data-act="delete-account"] { display: none !important; }
